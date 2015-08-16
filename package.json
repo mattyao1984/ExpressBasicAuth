@@ -1,0 +1,19 @@
+{
+  "name": "game-loader",
+  "version": "0.1.0",
+  "description": "This is a tutorial of oAuth with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Yao",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.2",
+    "passport": "^0.2.2",
+    "passport-http": "^0.3.0"
+  }
+}
