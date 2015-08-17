@@ -28,4 +28,21 @@ passport.use(new BasicStrategy(
   }
 ));
 
+//Use client basic stratey
+passport.use(new BasicStrategy(
+  function(username, password, callback){
+    Client.findOne({ id: username }, function(err, client){
+      if(err)
+        return callback(err);
+
+      //No client or bad password
+      if(!client || client.secret != password)
+        return callback(null, false);
+
+      return callback(null, client);
+    });
+  }
+));
+
 exports.isAuthenticated = passport.authenticate('basic', {session: false});
+exports.isClientAuthenticated = passport.authenticate('client-basic', {session: false});
