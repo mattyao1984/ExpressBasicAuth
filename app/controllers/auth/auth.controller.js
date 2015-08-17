@@ -29,7 +29,7 @@ passport.use(new BasicStrategy(
 ));
 
 //Use client basic stratey
-passport.use(new BasicStrategy(
+passport.use('client-basic', new BasicStrategy(
   function(username, password, callback){
     Client.findOne({ id: username }, function(err, client){
       if(err)
