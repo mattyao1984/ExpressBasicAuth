@@ -12,8 +12,11 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
+    "jade": "^1.11.0",
     "mongoose": "^4.1.2",
+    "morgan": "^1.6.1",
     "passport": "^0.2.2",
-    "passport-http": "^0.3.0"
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1"
   }
 }

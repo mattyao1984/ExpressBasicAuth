@@ -1,10 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var passport = require('passport');
 var config = require('./config');
-var Auth = require('./app/controllers/auth/auth.controller');
-
 var app = express();
 var port = process.env.port || 3002;
 
@@ -16,14 +12,7 @@ mongoose.connection.on('error', function(err) {
 	}
 );
 
-//Init passport
-app.use(passport.initialize());
-
-// Use the body-parser package in our application
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
 require('./routes')(app);
+require('./config/express')(app);
 
 app.listen(port);
