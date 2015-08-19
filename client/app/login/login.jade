@@ -1,0 +1,13 @@
+.container
+  p helloworld!
+  p
+    b is requesting
+    b full access
+    to your account.
+  p Do you approve?
+
+  form(action="/api/oauth/authorize", method="post")
+    input(name="transaction_id", type="hidden", ng-model="transaction_id")
+    div
+      input(type="submit", value="Allow", id="allow")
+      input(type="submit", value="Deny", name="cancel", id="deny")

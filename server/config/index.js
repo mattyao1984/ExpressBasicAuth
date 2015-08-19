@@ -1,5 +1,8 @@
 'use strict';
 
+var path = require('path');
+var _ = require('lodash');
+
 function requiredProcessEnv(name) {
   if(!process.env[name]) {
     throw new Error('You must set the ' + name + ' environment variable');
@@ -11,7 +14,7 @@ function requiredProcessEnv(name) {
 // ============================================
 var all = {
   env: process.env.NODE_ENV,
-
+  root: path.normalize(__dirname + '/../..'),
   // Server port
   port: process.env.PORT || 3002,
 

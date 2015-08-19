@@ -1,0 +1,26 @@
+{
+  "name": "game-loader",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mattyao1984/ExpressBasicAuth",
+  "authors": [
+    "Matt Yao <mattyao@b2cloud.com.au>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "json3": "~3.3.2",
+    "bootstrap": "~3.3.5",
+    "angular-sanitize": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "lodash": "~3.10.1",
+    "jquery": "~2.1.4",
+    "bootstrap-css": "~3.3.4"
+  }
+}
