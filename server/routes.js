@@ -13,8 +13,7 @@ module.exports = function(app) {
   app.use('/api', require('./controllers/game'));
   app.use('/api', require('./controllers/user'));
   app.use('/api', require('./controllers/client'));
-
-  //app.use('/auth', require('./controllers/auth'));
+  app.use('/', require('./controllers/oauth2'));
 
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(error[404]);

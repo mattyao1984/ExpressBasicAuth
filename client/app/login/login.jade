@@ -6,7 +6,7 @@
     to your account.
   p Do you approve?
 
-  form(action="/api/oauth/authorize", method="post")
+  form(action="/oauth2/authorize", method="post")
     input(name="transaction_id", type="hidden", ng-model="transaction_id")
     div
       input(type="submit", value="Allow", id="allow")

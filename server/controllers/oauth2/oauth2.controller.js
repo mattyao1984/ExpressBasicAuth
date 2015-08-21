@@ -43,7 +43,7 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
   //Create a new authorization code
   var code = new Code({
     value: uid(16),
-    client_id: client._id
+    client_id: client._id,
     redirectUri: redirectUri,
     user_id: user._id
   });
