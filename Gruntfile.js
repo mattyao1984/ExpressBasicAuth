@@ -203,7 +203,11 @@ module.exports = function (grunt) {
                 require('open')('http://localhost:8080/debug?port=5858');
               }, 500);
             });
-          }
+          },
+          cwd: __dirname,
+          watch: ['server'],
+          delay: 1000,
+          legacyWatch: true
         }
       }
     },
